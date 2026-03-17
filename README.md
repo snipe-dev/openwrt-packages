@@ -9,7 +9,7 @@ OpenWrt companion packages for WireGuard VPN and Policy-Based Routing management
 | Package | Description | Menu |
 |---|---|---|
 | `luci-app-wgprofiles` | WireGuard profile switcher with watchdog daemon | Network → WireGuard Profiles |
-| `dnsmon` | Real-time DNS traffic monitor with WG0/WAN detection | Services → DNSmon |
+| `luci-app-dnsmon` | Real-time DNS traffic monitor with WG0/WAN detection | Services → DNSmon |
 | `luci-app-pbrmgr` | PBR domain manager with bulk import/export | Services → PBR Manager |
 
 ---
@@ -63,7 +63,7 @@ opkg install pbr luci-app-pbr
 
 ```sh
 opkg install luci-app-wgprofiles
-opkg install dnsmon
+opkg install luci-app-dnsmon
 opkg install luci-app-pbrmgr
 ```
 
@@ -82,7 +82,7 @@ Download the `.ipk` files from the `repo/` directory and install locally:
 
 ```sh
 opkg install /tmp/luci-app-wgprofiles_1.0.0_all.ipk
-opkg install /tmp/dnsmon_1.0.0_all.ipk
+opkg install /tmp/luci-app-dnsmon_1.0.0_all.ipk
 opkg install /tmp/luci-app-pbrmgr_1.0.1_all.ipk
 /etc/init.d/rpcd restart
 /etc/init.d/uhttpd restart
@@ -148,7 +148,7 @@ Domain list manager for OpenWrt PBR (Policy-Based Routing). Replaces the cramped
 
 1. Install and configure `pbr` + `luci-app-pbr`
 2. Install `luci-app-wgprofiles`, upload your WireGuard `.conf`, connect tunnel
-3. Install `dnsmon`, start monitoring — see which domains go through WAN
+3. Install `luci-app-dnsmon`, start monitoring — see which domains go through WAN
 4. Install `luci-app-pbrmgr`, add missing domains to the correct PBR groups
 5. Hit **Apply All** in PBR Manager to restart PBR and flush DNS cache
 
@@ -157,7 +157,7 @@ Domain list manager for OpenWrt PBR (Policy-Based Routing). Replaces the cramped
 ## Uninstall
 
 ```sh
-opkg remove dnsmon
+opkg remove luci-app-dnsmon
 opkg remove luci-app-pbrmgr
 opkg remove luci-app-wgprofiles
 ```
