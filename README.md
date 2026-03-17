@@ -82,8 +82,8 @@ Download the `.ipk` files from the `repo/` directory and install locally:
 
 ```sh
 opkg install /tmp/luci-app-wgprofiles_1.0.0_all.ipk
-opkg install /tmp/luci-app-dnsmon_1.0.0_all.ipk
-opkg install /tmp/luci-app-pbrmgr_1.0.1_all.ipk
+opkg install /tmp/luci-app-dnsmon_1.0.1_all.ipk
+opkg install /tmp/luci-app-pbrmgr_1.0.3_all.ipk
 /etc/init.d/rpcd restart
 /etc/init.d/uhttpd restart
 ```
@@ -93,6 +93,8 @@ opkg install /tmp/luci-app-pbrmgr_1.0.1_all.ipk
 ## Package Details
 
 ### luci-app-wgprofiles
+
+![WireGuard Profiles](assets/wgprofiles-main.png)
 
 WireGuard profile manager for OpenWrt. Upload `.conf` files, switch between tunnels with one click, and keep the tunnel alive with a built-in watchdog daemon.
 
@@ -108,6 +110,8 @@ WireGuard profile manager for OpenWrt. Upload `.conf` files, switch between tunn
 ---
 
 ### dnsmon
+
+![DNS Monitor](assets/dnsmon-main.png)
 
 Real-time DNS traffic monitor. Shows which interface (WG0 or WAN) each client's traffic is routed through, based on dnsmasq nftset logs.
 
@@ -127,6 +131,9 @@ Real-time DNS traffic monitor. Shows which interface (WG0 or WAN) each client's 
 ---
 
 ### luci-app-pbrmgr
+
+![PBR Manager](assets/pbrmgr-main.png)
+![PBR Manager](assets/pbrmgr-add.png)
 
 Domain list manager for OpenWrt PBR (Policy-Based Routing). Replaces the cramped single-line domain field with a clean two-panel interface.
 
