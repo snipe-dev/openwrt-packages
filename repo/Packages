@@ -13,18 +13,18 @@ MD5Sum: be209014b93d70b4fe41ddfb93254157
 SHA256sum: b0447d3360502a7fa086200588a16395b3d565d4859fa4eb46318be4fc62c6d5
 
 Package: luci-app-pbrmgr
-Version: 1.0.2
+Version: 1.0.3
 Architecture: all
 Maintainer: snipe-dev
 Depends: luci-base,pbr
 Section: luci
 Priority: optional
-Installed-Size: 101
-Description: PBR domain manager with bulk import/export for OpenWrt Policy-Based Routing
-Filename: luci-app-pbrmgr_1.0.2_all.ipk
-Size: 6623
-MD5Sum: 3b2f14146cc88fe01207d6733ee59b30
-SHA256sum: c2c9eb02e79bae46f39fe014e99ad127c9a0d6acf6334f2b180afecc14564da3
+Installed-Size: 120
+Description: PBR domain manager with bulk import/export and nftset prefill for OpenWrt
+Filename: luci-app-pbrmgr_1.0.3_all.ipk
+Size: 7699
+MD5Sum: 231067e73b87e615c57b6794356c772b
+SHA256sum: 6c7ba7de5c660e92f6c30000f9f8fedb3b503ac5c5535af4036272b1832d6e11
 
 Package: luci-app-wgprofiles
 Version: 1.0.0
