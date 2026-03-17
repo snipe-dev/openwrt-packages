@@ -1,19 +1,19 @@
-Package: dnsmon
+Package: luci-app-wgprofiles
 Version: 1.0.0
 Architecture: all
 Maintainer: snipe-dev
-Depends: luci-base
+Depends: luci-base,wireguard-tools,luci-proto-wireguard
 Section: luci
 Priority: optional
-Installed-Size: 202
-Description: Real-time DNS traffic monitor with WG0/WAN interface detection for OpenWrt
+Installed-Size: 187
+Description: WireGuard profile switcher with watchdog daemon for OpenWrt
 Filename: dnsmon_1.0.0_all.ipk
 Size: 13262
 MD5Sum: d23f0680ddd3c50caf3b378c49133c2b
 SHA256sum: 6fbe912faf5330b989c32f02c8c32f0b3e5f88ae8f166372e21ebefe70bcb140
 
 Package: luci-app-pbrmgr
-Version: 1.0.0
+Version: 1.0.1
 Architecture: all
 Maintainer: snipe-dev
 Depends: luci-base,pbr
@@ -21,10 +21,10 @@ Section: luci
 Priority: optional
 Installed-Size: 101
 Description: PBR domain manager with bulk import/export for OpenWrt Policy-Based Routing
-Filename: luci-app-pbrmgr_1.0.0_all.ipk
-Size: 6539
-MD5Sum: 949b206a3f9898e660ccb5a615380aa8
-SHA256sum: ee406a9b72edc61bc7393a3f7c47d2252c6dbf56ae6d35ed57151ccc679aaaf5
+Filename: luci-app-pbrmgr_1.0.1_all.ipk
+Size: 6657
+MD5Sum: 1775f28825c6a4c7bda9de8b540d8f75
+SHA256sum: 61eb9826d63c99d7aa5e8320bded718f575da8ed617b846492fc1f5bf8d97f65
 
 Package: luci-app-wgprofiles
 Version: 1.0.0
