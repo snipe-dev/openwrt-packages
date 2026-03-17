@@ -18,7 +18,6 @@ OpenWrt companion packages for WireGuard VPN and Policy-Based Routing management
 
 - OpenWrt 23.05 or later
 - LuCI web interface installed
-- For `dnsmon`: `tcpdump-mini`
 - For `luci-app-wgprofiles`: `wireguard-tools`, `luci-proto-wireguard`
 - For `luci-app-pbrmgr`: `pbr`, `luci-app-pbr`
 
@@ -31,11 +30,22 @@ OpenWrt companion packages for WireGuard VPN and Policy-Based Routing management
 ```sh
 echo "src/gz snipe-dev https://raw.githubusercontent.com/snipe-dev/openwrt-packages/main/repo" \
     >> /etc/opkg/customfeeds.conf
-echo "option check_signature 0" >> /etc/opkg/customfeeds.conf
+```
+
+### 2. Add the signing key
+
+```sh
+echo "untrusted comment: public key 9319cdaad1266a8a
+RWSTGc2q0SZqiv06fwKX8htXFTHk4Sgj6utswhtRNNf+L7+fqkmuxN7C" > /etc/opkg/keys/9319cdaad1266a8a
+```
+
+### 3. Update package lists
+
+```sh
 opkg update
 ```
 
-### 2. Install dependencies
+### 4. Install dependencies
 
 ```sh
 # For wgprofiles
@@ -44,11 +54,12 @@ opkg install wireguard-tools luci-proto-wireguard
 reboot
 ```
 
+```sh
 # For pbrmgr (pbr must already be installed and configured)
 opkg install pbr luci-app-pbr
 ```
 
-### 3. Install packages
+### 5. Install packages
 
 ```sh
 opkg install luci-app-wgprofiles
@@ -56,7 +67,7 @@ opkg install dnsmon
 opkg install luci-app-pbrmgr
 ```
 
-### 4. Restart services
+### 6. Restart services
 
 ```sh
 /etc/init.d/rpcd restart
@@ -72,7 +83,7 @@ Download the `.ipk` files from the `repo/` directory and install locally:
 ```sh
 opkg install /tmp/luci-app-wgprofiles_1.0.0_all.ipk
 opkg install /tmp/dnsmon_1.0.0_all.ipk
-opkg install /tmp/luci-app-pbrmgr_1.0.0_all.ipk
+opkg install /tmp/luci-app-pbrmgr_1.0.1_all.ipk
 /etc/init.d/rpcd restart
 /etc/init.d/uhttpd restart
 ```
@@ -109,7 +120,7 @@ Real-time DNS traffic monitor. Shows which interface (WG0 or WAN) each client's 
 - Start/Stop/Pause controls
 - No extra processes — reads dnsmasq system log directly
 
-**Dependencies:** `luci-base`, `tcpdump-mini`
+**Dependencies:** `luci-base`
 
 **Note:** Requires `dnsmasq-full` with nftset support and PBR configured with `resolver_set=dnsmasq.nftset`.
 
